@@ -29,12 +29,15 @@ jxRequirements:
     gitName: github
     gitServer: https://github.com
     provider: minikube
+    registry: 10.105.0.129
   environments:
   - key: dev
+    owner: homanmn
+    repository: jenkins_x_test
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: 192.168.64.4.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -secret-infra.
@@ -42,6 +45,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: homanmn
   repository: bucketrepo
   secretStorage: vault
   vault: {}
